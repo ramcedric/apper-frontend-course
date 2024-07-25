@@ -1,0 +1,171 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for overall layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%;
+    height: 37.5px;
+    border-bottom: 1px solid black;
+    padding: 7.5px 15px;
+    background-color: white;
+    z-index: 1;
+}
+
+.header-item {
+    width: 75px;
+    height: 22.5px;
+    border: 1px solid black;
+    margin-left: 7.5px; /* Adjust spacing between items */
+}
+
+.header-item:first-child {
+    margin-left: 0; /* No margin for the first item */
+}
+
+.middle-box {
+    position: relative;
+}
+
+.middle-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: black; /* Color of the vertical split line */
+    transform: translateX(-50%);
+}
+
+/* Main content styling */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 150px auto 100px;
+    padding-bottom: 80px;
+}
+
+.google-icon, .search-icon-left, .search-icon-right, .button, .offered-in {
+    border: 1px solid black;
+}
+
+.google-icon {
+    width: 270px;
+    height: 92px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 580px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.search-icon-left {
+    width: 45px;
+    height: 45px;
+    margin-left: 15px;
+}
+
+.search-input {
+    flex: 1;
+}
+
+.search-icons-right {
+    display: flex;
+    margin-left: 15px;
+}
+
+.search-icon-right {
+    width: 45px;
+    height: 45px;
+    margin-left: 7.5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 580px;
+    margin-bottom: 20px;
+}
+
+.button {
+    width: 150px;
+    height: 45px;
+    margin: 0 7.5px;
+}
+
+.offered-in {
+    width: 20%;
+    height: 22.5px;
+    margin-top: 20px;
+}
+
+/* Footer styling */
+.footer {
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid black;
+    padding: 10px 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute; /* Ensure footer is always at the bottom */
+    bottom: 0;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.footer-item {
+    width: 75px;
+    height: 22.5px;
+    border: 1px solid black;
+    margin-right: 15px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 5px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+}
+
+.footer-link {
+    width: 75px;
+    height: 22.5px;
+    border: 1px solid black;
+    margin-right: 15px;
+}
